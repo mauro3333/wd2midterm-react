@@ -1,0 +1,62 @@
+* {
+    margin: 0px;
+    padding: 0;
+}
+
+body {
+	font-family: 'Ubuntu', sans-serif;
+    background-color: rgb(22, 90, 81);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+	margin: 10px;
+}
+
+.full-card {
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    /* min-width: 300px;
+    min-height: 450px; */
+    margin: 20px;
+}
+
+.full-card:hover {
+    cursor: pointer;
+}
+
+.front-card{
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    background-color: #9fb1b6;
+    color: black;
+    font-weight: bolder;
+}
+
+.front-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+}
+
+.genre-div {
+    text-align: center;
+    color: rgb(5, 50, 102);
+}
+
+.back-card{
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    background-color: #011420;
+    color: white;
+}
+
+.back-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+}
