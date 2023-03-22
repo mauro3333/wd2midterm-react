@@ -2,8 +2,17 @@ import "./Card.css";
 import React, { useState } from "react";
 import ReactCardFlip from "react-card-flip";
 
+
+
 export const Card = (props) => {
 	// console.log(props);
+    // console.log("eeeeeeeeeee", props.genre_ids);
+    // console.log(window.genres);
+    let tempoGenreArray = window.genres;
+    window.genres = [...new Set(tempoGenreArray)];
+    console.log("final-----", window.genres);
+
+
     let posterImage = "";
     let backImage = "";
     let mediaName = "";
@@ -47,10 +56,15 @@ export const Card = (props) => {
 
                     <div className="genre-div">
                         <h3>&lt;== Genres ==&gt;</h3>
-                        {props.genre_ids.map(element => {
+                        {props.genre_ids.map((element) => {
                                 return <p>{element}</p>
                             })
                         }
+
+
+
+
+
                     </div>
                 </div>
             </div>

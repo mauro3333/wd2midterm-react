@@ -32,23 +32,17 @@ export default function TvCard() {
             genreTvData.find(genre => {
                 if(genre.id === genreId){
                     element.genre_ids[index] = genre.name;
+					window.genres.push(genre.name);
                 }
             });
         });
     });
 
-
-
-
 	return (
-		// <div className="tvcard">
-		// 	<h1>diego m</h1>
-
-			<div className="tvcard-container">
-				{tvData.map((tv) => {
-					return <Card { ...tv }/>;
-				})}
-			</div>
-		// </div>
+		<div className="tvcard-container">
+			{tvData.map((tv) => {
+				return <Card { ...tv }/>;
+			})}
+		</div>
 	);
 }

@@ -32,6 +32,7 @@ export default function MovieCard() {
             genreMovieData.find(genre => {
                 if(genre.id === genreId){
                     element.genre_ids[index] = genre.name;
+					window.genres.push(genre.name); 
                 }
             });
         });
